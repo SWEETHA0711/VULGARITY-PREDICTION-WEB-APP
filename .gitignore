@@ -1,0 +1,11 @@
+
+# Ignore big/unnecessary folders
+node_modules/
+trained-model/
+universal-sentence-encoder/
+
+# Ignore datasets
+# *.zip
+
+# Ignore editor configs
+.vscode/
