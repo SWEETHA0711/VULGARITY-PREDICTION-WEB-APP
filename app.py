@@ -37,7 +37,12 @@ if not os.path.exists(MODEL_PATH):
 # Load the model with custom_objects for KerasLayer
 tom_predict = tf_keras.models.load_model(
     MODEL_PATH,
-    custom_objects={"KerasLayer": hub.KerasLayer},
+    custom_objects={
+        "KerasLayer": lambda **kwargs: hub.KerasLayer(
+            "https://tfhub.dev/google/universal-sentence-encoder/4",  # fetch from TF Hub
+            trainable=False
+        )
+    },
 )
 
 def check_toxicity(message):
@@ -102,7 +107,10 @@ def handle_disconnect():
     users.pop(request.sid, None)
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True, use_reloader=False, port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    socketio.run(app, host="0.0.0.0", port=port, debug=False)
+
+
 
 
 
@@ -196,4 +204,5 @@ if __name__ == "__main__":
 # # if __name__ == '__main__':
 
 # #     app.run(debug=True, use_reloader=False, port=5000)
+
 
