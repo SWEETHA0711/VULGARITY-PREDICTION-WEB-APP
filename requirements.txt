@@ -3,7 +3,8 @@ flask-cors
 flask-socketio
 eventlet
 gunicorn
-tensorflow
-tensorflow-hub
+tensorflow==2.13.0
+tf-keras==2.13.1
+tensorflow-hub==0.14.0
 requests
 
