@@ -1,7 +1,9 @@
 flask
-flask_socketio
-tensorflow
-tensorflow-hub
-huggingface_hub
+flask-cors
+flask-socketio
 eventlet
 gunicorn
+tensorflow
+tensorflow-hub
+requests
+
