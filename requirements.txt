@@ -3,3 +3,5 @@ flask_socketio
 tensorflow
 tensorflow-hub
 huggingface_hub
+eventlet
+gunicorn
