@@ -18,7 +18,7 @@ MODEL_PATH = os.path.join(MODEL_DIR, MODEL_FILENAME)
 # Public Hugging Face file URL
 HF_URL = (
     "https://huggingface.co/SWEETHA0711/vulgarity-detector/"
-    f"resolve/main/{MODEL_FILENAME}"
+    f"resolve/main/{MODEL_DIR}/{MODEL_FILENAME}"
 )
 
 # Ensure model directory exists
@@ -196,3 +196,4 @@ if __name__ == "__main__":
 # # if __name__ == '__main__':
 
 # #     app.run(debug=True, use_reloader=False, port=5000)
+
